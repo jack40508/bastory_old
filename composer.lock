@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed9df8b872992035f068a7fe461a635a",
-    "content-hash": "76036da3b5b55b91dbe1e1affa01bf9e",
+    "hash": "61a9b70193e5724eb39dae09c679cd81",
+    "content-hash": "ccfbc5ba4cd032f4097104724b9cce94",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -160,6 +160,36 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "hchs/judge",
+            "version": "0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hchstera/judge.git",
+                "reference": "e53fa8ce08dbddaad90c7a2ac9dfd55f0150c441"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hchstera/judge/zipball/e53fa8ce08dbddaad90c7a2ac9dfd55f0150c441",
+                "reference": "e53fa8ce08dbddaad90c7a2ac9dfd55f0150c441",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hchs\\Judge\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Hchs",
+                    "email": "g9308370@hotmail.com"
+                }
+            ],
+            "description": "Handle Role and Permission in Laravel",
+            "time": "2017-01-01 13:36:03"
         },
         {
             "name": "jakub-onderka/php-console-color",
