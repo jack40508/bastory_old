@@ -13,5 +13,9 @@ class Game extends Model
     		'location',
     		'address',
     		'datetime',
+    		'gather_at',
+    		'category',
+    		'contant',
+
     ];
 }

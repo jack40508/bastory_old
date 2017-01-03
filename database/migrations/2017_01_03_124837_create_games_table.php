@@ -19,6 +19,9 @@ class CreateGamesTable extends Migration
             $table->string('location');
             $table->string('address');
             $table->datetime('datetime');
+            $table->datetime('gather_at');
+            $table->string('category');
+            $table->string('contant');
             $table->timestamps();
         });
     }
