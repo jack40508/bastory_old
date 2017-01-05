@@ -16,6 +16,9 @@ class CreatePlacementsTable extends Migration
         Schema::create('placements', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('english_name');
+            $table->string('abbreviation');
+            $table->integer('team_id');
             $table->timestamps();
         });
     }

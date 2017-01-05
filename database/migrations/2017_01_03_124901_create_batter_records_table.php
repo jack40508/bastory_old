@@ -15,6 +15,12 @@ class CreateBatterRecordsTable extends Migration
     {
         Schema::create('batter_records', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('game_id');
+            $table->integer('round');
+            $table->integer('player_id');
+            $table->integer('play_type_id');
+            $table->integer('ballpath_id');
+            $table->integer('position_id');
             $table->timestamps();
         });
     }

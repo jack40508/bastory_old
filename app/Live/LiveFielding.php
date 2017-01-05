@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Game;
+namespace App\Live;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DefenseRecord extends Model
+class LiveFielding extends Model
 {
     //
 }
