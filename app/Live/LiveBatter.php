@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Records;
+namespace App\Live;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LivePlay extends Model
+class LiveBatter extends Model
 {
     //
 }
