@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Accounts\Player;
 
 class Placement extends Model
 {
@@ -22,10 +23,10 @@ class Placement extends Model
     **------------------------------------------------------------------------*/
 
     /**
-     *  一種飛行軌跡 對 多次打擊紀錄
+     *  多個守備位子 對 多名球員
      */
-    public function batter_records()
+    public function players()
     {
-    	return $this->hasManny(BatterReord::class);
+    	return $this->belongsToMany(Player::class);
     }
 }

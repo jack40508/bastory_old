@@ -12,6 +12,8 @@ class Player extends Authenticatable
         'name',
         'email',
         'password',
+        'nickname',
+        'birth',
     ];
 
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Game\BatterReord;
 
 class Ballpath extends Model
 {
@@ -21,7 +22,7 @@ class Ballpath extends Model
     /**
      *  一種飛行軌跡 對 多次打擊紀錄
      */
-    public function batter_records()
+    public function batterRecords()
     {
     	return $this->hasManny(BatterReord::class);
     }
