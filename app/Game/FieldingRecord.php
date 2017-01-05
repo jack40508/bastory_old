@@ -1,20 +1,19 @@
 <?php
 
-namespace App;
+namespace App\Game;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PlayType extends Model
+class FieldingRecord extends Model
 {
     /*------------------------------------------------------------------------**
     ** Entity 定義                                                            **
     **------------------------------------------------------------------------*/
-    protected $table = 'play_types';
+    protected $table = 'fielding_records';
     protected $fillable = [
-    	'name',
-    	'english_name',
-    	'abbreviation',
-    	'team_id',
+    	'game_id',
+    	'player_id',
+    	'error',
     ];
 
     /*------------------------------------------------------------------------**
@@ -22,10 +21,18 @@ class PlayType extends Model
     **------------------------------------------------------------------------*/
 
     /**
-     *  一種飛行軌跡 對 多次打擊紀錄
+     *  一場守備紀錄 屬於 一場比賽
      */
-    public function batter_records()
+    public function game()
     {
-    	return $this->hasManny(BatterReord::class);
+    	return $this->belongsTo(Game::class);
+    }
+
+    /**
+     *  一場守備紀錄 屬於 一名球員
+     */
+    public function player()
+    {
+    	return $this->belongsTo(Player::class);
     }
 }

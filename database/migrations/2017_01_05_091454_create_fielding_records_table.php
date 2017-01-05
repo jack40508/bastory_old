@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDefenseRecordsTable extends Migration
+class CreateFieldingRecordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDefenseRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('defense_records', function (Blueprint $table) {
+        Schema::create('fielding_records', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('game_id');
+            $table->integer('player_id');
+            $table->integer('error');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDefenseRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('defense_records');
+        Schema::dropIfExists('fielding_records');
     }
 }
