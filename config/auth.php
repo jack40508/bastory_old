@@ -36,6 +36,11 @@ return [
     */
 
     'guards' => [
+        'player' => [
+            'driver' => 'session',
+            'provider' => 'players'
+        ],
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -65,9 +70,15 @@ return [
     */
 
     'providers' => [
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Accounts\Player::class,
         ],
 
         // 'users' => [
