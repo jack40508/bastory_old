@@ -2,7 +2,7 @@
 
 namespace App\Accounts;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Hchs\Judge\Permission\AuthEloquent as Authenticatable;
 
 class Player extends Authenticatable
 {

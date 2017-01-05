@@ -41,6 +41,11 @@ return [
             'provider' => 'players'
         ],
 
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins'
+        ],
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -76,9 +81,14 @@ return [
             'model' => App\User::class,
         ],
 
-        'users' => [
+        'players' => [
             'driver' => 'eloquent',
             'model' => App\Accounts\Player::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Accounts\Admin::class,
         ],
 
         // 'users' => [
