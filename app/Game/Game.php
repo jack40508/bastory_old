@@ -3,6 +3,8 @@
 namespace App\Game;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Organization\Team;
+use App\Accounts\Player;
 
 class Game extends Model
 {
@@ -29,7 +31,7 @@ class Game extends Model
      *  多場比賽 屬於 一個球隊
      */
 
-    public function teams()
+    public function team()
     {
         return $this->belongsTo(Team::class);
     }
@@ -47,7 +49,7 @@ class Game extends Model
      *  一場比賽 對 多筆打擊紀錄
      */
 
-    public function batter_records()
+    public function batterRecords()
     {
         return $this->hasMany(BatterRecord::class);
     }
@@ -56,7 +58,7 @@ class Game extends Model
      *  一場比賽 對 多筆投球紀錄
      */
 
-    public function pitch_records()
+    public function pitchRecords()
     {
         return $this->hasMany(PitchRecord::class);
     }
@@ -65,8 +67,8 @@ class Game extends Model
      *  一場比賽 對 多筆守備紀錄
      */
 
-    public function denfense_records()
+    public function fieldingRecords()
     {
-        return $this->hasMany(DefenseRecord::class);
+        return $this->hasMany(FieldingRecord::class);
     }
 }

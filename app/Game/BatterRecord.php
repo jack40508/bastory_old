@@ -3,6 +3,9 @@
 namespace App\Game;
 
 use Illuminate\Database\Eloquent\Model;
+use App\StaticInfo\Ballpath;
+use App\StaticInfo\PlayType;
+use App\StaticInfo\Position;
 
 class BatterRecord extends Model
 {
@@ -42,7 +45,7 @@ class BatterRecord extends Model
     /**
      *  一次打擊紀錄 屬於 一種play
      */
-    public function play_type()
+    public function playType()
     {
     	return $this->belongsTo(PlayType::class);
     }

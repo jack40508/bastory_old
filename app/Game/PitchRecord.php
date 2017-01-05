@@ -3,6 +3,7 @@
 namespace App\Game;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Accounts\Player;
 
 class PitchRecord extends Model
 {
