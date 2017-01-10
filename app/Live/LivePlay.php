@@ -27,4 +27,31 @@ class LivePlay extends Model
     {
         return $this->hasOne(Game::class);
     }
+
+    /**
+     *  一場比賽 對 多筆打擊紀錄
+     */
+
+    public function live_Batters()
+    {
+        return $this->hasMany(LiveBatter::class);
+    }
+
+    /**
+     *  一場比賽 對 多筆投球紀錄
+     */
+
+    public function live_pitches()
+    {
+        return $this->hasMany(LivePitch::class);
+    }
+
+    /**
+     *  一場比賽 對 多筆守備紀錄
+     */
+
+    public function live_fieldings()
+    {
+        return $this->hasMany(LiveFielding::class);
+    }
 }
