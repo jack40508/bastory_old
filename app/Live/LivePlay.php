@@ -22,9 +22,20 @@ class LivePlay extends Model
     /**
      *  一場即時紀錄 屬於 一場比賽
      */
-
     public function game()
     {
         return $this->hasOne(Game::class);
+    }
+    public function livePitches()
+    {
+        return $this->hasMany(LivePitch::class);
+    }
+    public function liveBatters()
+    {
+        return $this->hasMany(LiveBatter::class);
+    }
+    public function liveFieldings()
+    {
+        return $this->hasMany(LiveFielding::class);
     }
 }

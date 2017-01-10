@@ -23,7 +23,7 @@ class Team extends Model
     {
         return $this->belongsToMany(Season::class);
     }
-    public function Players()
+    public function players()
     {
         return $this->belongsToMany(Player::class);
     }
