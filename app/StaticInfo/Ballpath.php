@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\StaticInfo;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Game\BatterReord;

@@ -15,6 +15,13 @@ class CreateLivePitchesTable extends Migration
     {
         Schema::create('live_pitches', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('live_play_id');
+            $table->integer('player_id');
+            $table->integer('inning_pitched');
+            $table->integer('strike');
+            $table->integer('ball');
+            $table->integer('strike_out');
+            $table->integer('base_on_ball');
             $table->timestamps();
         });
     }

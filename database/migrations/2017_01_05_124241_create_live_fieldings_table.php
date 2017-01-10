@@ -15,6 +15,9 @@ class CreateLiveFieldingsTable extends Migration
     {
         Schema::create('live_fieldings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('live_play_id');
+            $table->integer('player_id');
+            $table->integer('error');
             $table->timestamps();
         });
     }
