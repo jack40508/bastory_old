@@ -22,7 +22,6 @@ class LivePlay extends Model
     /**
      *  一場即時紀錄 屬於 一場比賽
      */
-
     public function game()
     {
         return $this->hasOne(Game::class);
