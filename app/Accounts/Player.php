@@ -5,6 +5,9 @@ use Hchs\Judge\Permission\AuthEloquent as Authenticatable;
 use App\Live\LivePitch;
 use App\Live\LiveBatter;
 use App\Live\LiveFielding;
+use App\Game\BatterRecord;
+use App\Game\FieldingRecord;
+use App\Game\PitchRecord;
 
 class Player extends Authenticatable
 {
@@ -35,5 +38,17 @@ class Player extends Authenticatable
     public function liveFieldings()
     {
         return $this->hasMany(LiveFielding::class);
+    }
+    public function batterRecords()
+    {
+        return $this->hasMany(BatterRecord::class);
+    }
+    public function fieldingRecords()
+    {
+        return $this->hasMany(FieldingRecord::class);
+    }
+    public function pitchRecords()
+    {
+        return $this->hasMany(PitchRecord::class);
     }
 }

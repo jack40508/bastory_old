@@ -12,9 +12,9 @@ class FieldingRecord extends Model
     **------------------------------------------------------------------------*/
     protected $table = 'fielding_records';
     protected $fillable = [
-    	'game_id',
-    	'player_id',
-    	'error',
+        'game_id',
+        'player_id',
+        'error',
     ];
 
     /*------------------------------------------------------------------------**
@@ -22,11 +22,11 @@ class FieldingRecord extends Model
     **------------------------------------------------------------------------*/
 
     /**
-     *  一場守備紀錄 屬於 一場比賽
+     *  一場守備紀錄 屬於 一場比賽.
      */
     public function game()
     {
-    	return $this->belongsTo(Game::class);
+        return $this->belongsTo(Game::class);
     }
 
     /**
@@ -34,6 +34,6 @@ class FieldingRecord extends Model
      */
     public function player()
     {
-    	return $this->belongsTo(Player::class);
+        return $this->belongsTo(Player::class);
     }
 }
