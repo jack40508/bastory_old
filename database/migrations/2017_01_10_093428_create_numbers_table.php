@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLivePlaysTable extends Migration
+class CreateNumbersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateLivePlaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('live_plays', function (Blueprint $table) {
+        Schema::create('numbers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('game_id');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateLivePlaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('live_plays');
+        Schema::dropIfExists('numbers');
     }
 }

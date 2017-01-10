@@ -14,6 +14,7 @@ class Game extends Model
     protected $table = 'games';
     protected $fillable = [
     	'name',
+        'team_id',
     	'location',
     	'address',
     	'datetime',

@@ -15,6 +15,12 @@ class CreateLiveBattersTable extends Migration
     {
         Schema::create('live_batters', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('live_play_id');
+            $table->integer('round');
+            $table->integer('player_id');
+            $table->integer('play_type_id');
+            $table->integer('ballpath_id');
+            $table->integer('position_id');
             $table->timestamps();
         });
     }
