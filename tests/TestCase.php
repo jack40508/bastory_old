@@ -1,7 +1,15 @@
 <?php
+namespace Tests;
 
-abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Support\Facades\Storage;
+use Tests\traits\MessagePrintable;
+
+abstract class TestCase extends BaseTestCase
 {
+    use MessagePrintable;
+
     /**
      * The base URL to use while testing the application.
      *
@@ -18,8 +26,11 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
     {
         $app = require __DIR__.'/../bootstrap/app.php';
 
-        $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
-
+        $app->make(Kernel::class)->bootstrap();
+        if (!Storage::disk('test')->has('test_database.sqlite')) {
+            Storage::disk('test')->put('test_database.sqlite', '');
+            $this->printMessage('Created test_database.sqlite at WakaTracer/database/');
+        }
         return $app;
     }
 }
