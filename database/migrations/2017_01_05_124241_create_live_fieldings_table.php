@@ -15,7 +15,14 @@ class CreateLiveFieldingsTable extends Migration
     {
         Schema::create('live_fieldings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('live_play_id')->unsigned()->nullable();
+            $table->integer('player_id')->unsigned()->nullable();
+            $table->integer('error');
             $table->timestamps();
+
+            //foreign Key Set
+            $table->foreign('live_play_id')->references('id')->on('live_plays')->onDelete('set null');
+            $table->foreign('player_id')->references('id')->on('players')->onDelete('set null');
         });
     }
 

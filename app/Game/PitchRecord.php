@@ -26,7 +26,7 @@ class PitchRecord extends Model
     **------------------------------------------------------------------------*/
 
     /**
-     *  一場守備紀錄 屬於 一場比賽
+     *  一場投球紀錄 屬於 一場比賽
      */
     public function game()
     {
@@ -34,7 +34,7 @@ class PitchRecord extends Model
     }
 
     /**
-     *  一場守備紀錄 屬於 一名球員
+     *  一場投球紀錄 屬於 一名球員
      */
     public function player()
     {

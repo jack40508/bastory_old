@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePitchRecordsTable extends Migration
+class GamePlayer extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,15 @@ class CreatePitchRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pitch_records', function (Blueprint $table) {
+        Schema::create('game_player', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('game_id')->unsigned()->nullable();
             $table->integer('player_id')->unsigned()->nullable();
-            $table->integer('inning_pitched');
-            $table->integer('strike');
-            $table->integer('ball');
-            $table->integer('strike_out');
-            $table->integer('base_on_ball');
             $table->timestamps();
 
             //foreign Key Set
-            $table->foreign('game_id')->references('id')->on('games')->onDelete('set null');
-            $table->foreign('player_id')->references('id')->on('players')->onDelete('set null');
+            $table->foreign('game_id')->references('id')->on('games');
+            $table->foreign('player_id')->references('id')->on('players');
         });
     }
 
@@ -37,6 +32,6 @@ class CreatePitchRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pitch_records');
+        Schema::dropIfExists('game_player');
     }
 }

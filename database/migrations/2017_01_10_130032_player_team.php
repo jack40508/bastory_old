@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFieldingRecordsTable extends Migration
+class PlayerTeam extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreateFieldingRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fielding_records', function (Blueprint $table) {
+        Schema::create('player_team', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('game_id')->unsigned()->nullable();
             $table->integer('player_id')->unsigned()->nullable();
-            $table->integer('error');
+            $table->integer('team_id')->unsigned()->nullable();
             $table->timestamps();
 
             //foreign Key Set
-            $table->foreign('game_id')->references('id')->on('games')->onDelete('set null');
-            $table->foreign('player_id')->references('id')->on('players')->onDelete('set null');
+            $table->foreign('player_id')->references('id')->on('players');
+            $table->foreign('team_id')->references('id')->on('teams');
         });
     }
 
@@ -33,6 +32,6 @@ class CreateFieldingRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fielding_records');
+        Schema::dropIfExists('player_team');
     }
 }
