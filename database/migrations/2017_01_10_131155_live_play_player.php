@@ -13,14 +13,14 @@ class LivePlayPlayer extends Migration
      */
     public function up()
     {
-        Schema::create('live_player_player', function (Blueprint $table) {
+        Schema::create('live_play_player', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('live_player_id')->unsigned()->nullable();
             $table->integer('player_id')->unsigned()->nullable();
             $table->timestamps();
 
             //foreign Key Set
-            $table->foreign('live_player_id')->references('id')->on('liveplays');
+            $table->foreign('live_player_id')->references('id')->on('live_plays');
             $table->foreign('player_id')->references('id')->on('players');
         });
     }
