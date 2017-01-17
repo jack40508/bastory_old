@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 $router->resource('test','Test\TestController');
+$router->resource('/','Bastory\BastoryController');
