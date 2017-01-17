@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Auth Routes
+Route::group(['namespace' => 'Auth'], function () {
+    Route::get('register', 'RegisterController@register');
+    Route::post('register', 'RegisterController@create');
+    Route::get('login', 'LoginController@login');
+    Route::post('login', 'LoginController@check');
 });
 
+
 $router->resource('test','Test\TestController');
+$router->resource('/','Bastory\BastoryController');
