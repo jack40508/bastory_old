@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 //Auth Routes
 Route::group(['namespace' => 'Auth'], function () {
     Route::get('register', 'RegisterController@register');
@@ -23,5 +20,5 @@ Route::group(['namespace' => 'Auth'], function () {
 });
 
 
-
 $router->resource('test','Test\TestController');
+$router->resource('/','Bastory\BastoryController');
