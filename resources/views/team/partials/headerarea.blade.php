@@ -11,15 +11,17 @@
                 
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="/about">關於我們</a></li>
-                <li><a href="/teamregister">註冊球隊</a></li>
-                <li><a href="/recruit">徵人公告</a></li>
-                <li><a href="/board">公佈欄</a></li>
+                <li><a href="/team/teamname/game">近期比賽</a></li>
+                <li><a href="/team/teamname/pastactivity">過去活動</a></li>
+                <li><a href="/team/teamname/grade">成績資訊</a></li>
+                <li><a href="/team/teamname/recruit">加入我們</a></li>
+                <li><a href="/team/teamname/board">公佈欄</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <a class="navbar-brand" href="#">Bastory</a>
+                <a class="navbar-brand" href="#">TeamName</a>
             </ul>
           </div>
         </nav> 
-    </div> 
+    </div>
+     
 </div>

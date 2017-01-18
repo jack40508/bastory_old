@@ -14,4 +14,5 @@
 
 
 $router->resource('test','Test\TestController');
-$router->resource('/','Bastory\BastoryController');
+$router->resource('/home','Bastory\BastoryController');
+$router->resource('/team/{team_name}','Team\TeamController');
