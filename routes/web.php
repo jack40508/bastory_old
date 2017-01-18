@@ -19,6 +19,10 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('login', 'LoginController@check');
 });
 
+//Team Routes
+Route::group(['namespace' => 'Team'],function (){
+	Route::get('team/{team_name}/game','TeamController@game');
+});
 
 $router->resource('test','Test\TestController');
 $router->resource('/home','Bastory\BastoryController');

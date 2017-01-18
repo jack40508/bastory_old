@@ -31,8 +31,7 @@
             @include('team.partials.leftcontent')    
         </div> 
         <div class="col-xs-10 col-md-8">
-            原本是首頁~~~~~~~~~~~~~~~~~~
-            @yield('centercontent')    
+            @yield('content')    
         </div>
         <div class="col-xs-2 col-md-2">
             @include('team.partials.rightcontent')    

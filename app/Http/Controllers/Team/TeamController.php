@@ -86,7 +86,7 @@ class TeamController extends Controller {
 
 	public function game()
 	{
-		return view('team/game');
+		return view('team/home/game');
 	}
 
 }
