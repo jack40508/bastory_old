@@ -32,4 +32,6 @@
         </div> 
     </div>
 </body>
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>
 </html>

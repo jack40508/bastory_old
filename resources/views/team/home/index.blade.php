@@ -37,5 +37,8 @@
             @include('team.partials.rightcontent')    
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class TeamController extends Controller {
+class GameController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +16,7 @@ class TeamController extends Controller {
 	public function index()
 	{
 		//
-		return view('team/home/index');
+		return view('team/game/index');
 	}
 
 	/**
@@ -48,7 +48,6 @@ class TeamController extends Controller {
 	public function show($id)
 	{
 		//
-		return view('team/home/index');
 	}
 
 	/**
@@ -84,9 +83,10 @@ class TeamController extends Controller {
 		//
 	}
 
-	public function introduction()
+	//Past Game View
+	public function pastgame()
 	{
-		return view('team/home/introduction');
+		//
+		return view('team/game/index-past');
 	}
-
 }
