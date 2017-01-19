@@ -20,23 +20,27 @@ Route::group(['namespace' => 'Auth'], function () {
 });
 
 //Bastory Home Routes
-$router->resource('/','Bastory\BastoryController');
+Route::group(['namespace' => 'Bastory'], function(){
+	Route::get('/','BastoryController@index');
+});
 
 //Team Game Routes
 Route::group(['namespace' => 'Team'],function (){
 	Route::get('team/{team_name}/pastgame','GameController@pastgame');
+	Route::resource('/team/{team_name}/game','GameController');
 });
-$router->resource('/team/{team_name}/game','Team\GameController');
 
 //Team Game Result Routes
-$router->resource('/team/{team_name}/gameresult','Team\GameResultController');
+Route::group(['namespace' => 'Team'],function (){
+	Route::resource('/team/{team_name}/gameresult','GameResultController');
+});
 
 //Team Routes
 Route::group(['namespace' => 'Team'],function (){
 	Route::get('team/{team_name}/about','TeamController@about');
 	Route::get('team/{team_name}/introduction','TeamController@introduction');
+	Route::resource('/team/{team_name}','TeamController');
 });
-$router->resource('/team/{team_name}','Team\TeamController');
 
 $router->resource('test','Test\TestController');
 
