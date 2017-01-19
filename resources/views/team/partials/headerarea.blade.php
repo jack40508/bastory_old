@@ -1,10 +1,7 @@
-<div class="row" style="background-image:url('images/banner_bastory.jpg'); background-size:cover; background-position:center; height: 320px;">   
+<div class="row" style="background-image:url('/images/banner_bastory.jpg'); background-size:cover; background-position:center; height: 320px;">   
 </div>
 <div class="row">
-    <div class="col-xs-4 col-md-2" style="background-color:#EE82EE;">
-        login  
-    </div>
-    <div class="col-xs-8 col-md-10">
+    <div class="col-xs-12 col-md-12">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
