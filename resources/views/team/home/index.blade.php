@@ -21,24 +21,25 @@
     </script>
 </head>
 <body>
-    <div class="row">
-        <div class="col-xs-12 col-md-12">
-            @include('team.partials.headerarea')    
-        </div>   
-    </div>
-    <div class="row">
-        <div class="col-xs-2 col-md-2">
-            @include('team.partials.leftcontent')    
-        </div> 
-        <div class="col-xs-10 col-md-8">
-            @yield('content')    
+    <div id="app">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                @include('team.partials.headerarea')
+            </div>
         </div>
-        <div class="col-xs-2 col-md-2">
-            @include('team.partials.rightcontent')    
+        <div class="row">
+            <div class="col-xs-2 col-md-2">
+                @include('team.partials.leftcontent')
+            </div>
+            <div class="col-xs-10 col-md-8">
+                @yield('content')
+            </div>
+            <div class="col-xs-2 col-md-2">
+                @include('team.partials.rightcontent')
+            </div>
         </div>
     </div>
-
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

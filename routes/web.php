@@ -17,6 +17,7 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('register', 'RegisterController@create');
     Route::get('login', 'LoginController@login');
     Route::post('login', 'LoginController@check');
+    Route::get('logout', 'LoginController@logout');
 });
 
 //Bastory Home Routes
@@ -37,6 +38,3 @@ Route::group(['namespace' => 'Team'],function (){
 });
 
 $router->resource('test','Test\TestController');
-
-
-
