@@ -16,7 +16,7 @@ class GameResultController extends Controller {
 	public function index()
 	{
 		//
-		return view('team/gameresult/index');
+		return view('team.gameresult.index');
 	}
 
 	/**

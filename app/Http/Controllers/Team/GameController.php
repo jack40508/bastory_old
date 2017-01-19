@@ -16,7 +16,7 @@ class GameController extends Controller {
 	public function index()
 	{
 		//
-		return view('team/game/index');
+		return view('team.game.index');
 	}
 
 	/**
@@ -87,6 +87,6 @@ class GameController extends Controller {
 	public function pastgame()
 	{
 		//
-		return view('team/game/index-past');
+		return view('team.game.index-past');
 	}
 }

@@ -7688,6 +7688,10 @@ button.close {
   }
 }
 
+.nav-none-radius {
+  border-radius: 0px;
+}
+
 .margin-test {
   margin-top: 100px;
 }

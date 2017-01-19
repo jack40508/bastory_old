@@ -16,7 +16,7 @@ class TeamController extends Controller {
 	public function index()
 	{
 		//
-		return view('team/home/index');
+		return view('team.home.index');
 	}
 
 	/**
@@ -48,7 +48,7 @@ class TeamController extends Controller {
 	public function show($id)
 	{
 		//
-		return view('team/home/index');
+		return view('team.home.index');
 	}
 
 	/**
@@ -86,7 +86,7 @@ class TeamController extends Controller {
 
 	public function introduction()
 	{
-		return view('team/home/introduction');
+		return view('team.home.introduction');
 	}
 
 }

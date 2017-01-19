@@ -20,23 +20,17 @@ Route::group(['namespace' => 'Auth'], function () {
 });
 
 //Bastory Home Routes
-Route::group(['namespace' => 'Bastory'], function(){
+Route::group(['namespace' => 'Bastory','middleware' => 'player'], function(){
 	Route::get('/','BastoryController@index');
 });
 
-//Team Game Routes
 Route::group(['namespace' => 'Team'],function (){
+	//Game Routes
 	Route::get('team/{team_name}/pastgame','GameController@pastgame');
 	Route::resource('/team/{team_name}/game','GameController');
-});
-
-//Team Game Result Routes
-Route::group(['namespace' => 'Team'],function (){
+	//Team Game Result Routes
 	Route::resource('/team/{team_name}/gameresult','GameResultController');
-});
-
-//Team Routes
-Route::group(['namespace' => 'Team'],function (){
+	//Team Routes
 	Route::get('team/{team_name}/about','TeamController@about');
 	Route::get('team/{team_name}/introduction','TeamController@introduction');
 	Route::resource('/team/{team_name}','TeamController');

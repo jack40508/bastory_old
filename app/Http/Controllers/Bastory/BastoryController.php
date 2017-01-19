@@ -16,7 +16,7 @@ class BastoryController extends Controller {
 	public function index()
 	{
 		//
-		return view('bastory/home/index');
+		return view('bastory.home.index');
 	}
 
 	/**

@@ -2,7 +2,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12 col-md-12">
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse nav-none-radius">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Bastory</a>
