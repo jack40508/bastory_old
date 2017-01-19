@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use App\Http\Requests\Auth\CreateRequest;
 
 class RegisterController extends Controller
 {
@@ -40,7 +41,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    public function create(Request $request)
+    public function create(CreateRequest $request)
     {
         // 尚未寫檢查
         return Player::create([

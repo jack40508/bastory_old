@@ -35,8 +35,6 @@ class LoginController extends Controller
 
     public function check(Request $request)
     {
-        // Auth::login(Player::find(1));
-        // dd(Auth::user());
         $is_correct_info = Auth::guard($this->login_type)
                             ->attempt([
                                 'email' => $request->email,
@@ -44,10 +42,14 @@ class LoginController extends Controller
                             ]);
 
         if ($is_correct_info) {
-            dd('Hi! '.Auth::user()->nickname);
-            return redirect('/');
+            return redirect()->intended('/team/team');
         }
 
         return redirect('/login')->withErrors('Login Failed...');
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->back();
     }
 }

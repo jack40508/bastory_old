@@ -11,6 +11,11 @@
             <div class="card card-container">
                 <img class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
                 <p class="profile-name-card"></p>
+                @if(count($errors)>0)
+                   @foreach ($errors->all() as $error)
+                      <div class="alert alert-danger form-allert" role="alert">{{ $error }}</div>
+                  @endforeach
+                @endif
                 <form class="form-signin" role="form" method="POST" action="{{ url('/register') }}">
                     {{ csrf_field() }}
                     <span class="reauth-email"></span>
