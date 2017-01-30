@@ -28,7 +28,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-12">
-            @yield('bastory.partials.content')    
+            @yield('content')    
         </div> 
     </div>
 </body>

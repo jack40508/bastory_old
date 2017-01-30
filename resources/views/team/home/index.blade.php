@@ -1,45 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
-</head>
-<body>
-    <div id="app">
+@extends('bastory.home.index')
+@section('content')
+<div class="info-table">
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-12">
-                @include('team.partials.headerarea')
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-2 col-md-2">
-                @include('team.partials.leftcontent')
-            </div>
-            <div class="col-xs-10 col-md-8">
-                @yield('content')
-            </div>
-            <div class="col-xs-2 col-md-2">
-                @include('team.partials.rightcontent')
-            </div>
+            @foreach($teams as $team)
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <div class="infoing text-center">                       
+                        <div class="infoing-top" style="background-image:url('images/logo/{{$team->logo}}'); background-size:contain; background-position:center;"> 
+                        </div>  
+                        <ul>
+                        <li>{{$team->name}}</li>
+                        <li>{{$team->location}}</li>
+                        </ul>
+                        <a class="infoingbtn" href="{{ url('/team/'.$team->name) }}">點我前往</a>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
-    <!-- Scripts -->
-    <script src="{{asset('js/app.js')}}"></script>
-</body>
-</html>
+</div>
+@endsection

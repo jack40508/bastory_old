@@ -1,11 +1,11 @@
-<div class="row" style="background-image:url('/images/banner_bastory.jpg'); background-size:cover; background-position:center; height: 320px;">
+<div class="row" style="background-image:url('/images/banner/{{$team->banner}}'; background-size:cover; background-position:center; height: 320px;">
 </div>
 <div class="row">
     <div class="col-xs-12 col-md-12">
         <nav class="navbar navbar-inverse nav-none-radius">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">TeamName</a>
+                    <a class="navbar-brand" href="#">{{$team->name}}</a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#TeamNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>

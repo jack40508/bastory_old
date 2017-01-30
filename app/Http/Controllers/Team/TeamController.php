@@ -3,10 +3,16 @@ namespace App\Http\Controllers\Team;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Organization\TeamRepository;
 
 use Illuminate\Http\Request;
 
 class TeamController extends Controller {
+
+	public function __construct(TeamRepository $team)
+    {
+        $this->team = $team;
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +22,9 @@ class TeamController extends Controller {
 	public function index()
 	{
 		//
-		return view('team.home.index');
+		$teams = $this->team->getAllTeams();
+
+		return view('team.home.index',compact('teams'));
 	}
 
 	/**
@@ -45,10 +53,12 @@ class TeamController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($teamname)
 	{
 		//
-		return view('team.home.index');
+		$team = $this->team->getTeamByName($teamname);
+		
+		return view('team.home.show',compact('team'));
 	}
 
 	/**

@@ -16,7 +16,7 @@ class BastoryMiddleware
      */
     public function handle($request, Closure $next)
     {
-        dd(Auth::user());
+        //dd(Auth::user());
 
         return $next($request);
     }

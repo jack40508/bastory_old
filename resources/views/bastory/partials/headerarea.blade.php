@@ -1,4 +1,4 @@
-<div class="row" style="background-image:url('images/banner_bastory.jpg'); background-size:cover; background-position:center; height: 320px;">   
+<div class="row" style="background-image:url('images/banner/bastory.jpg'); background-size:cover; background-position:center; height: 320px;">   
 </div>
 <div class="row">
     <div class="col-xs-12 col-md-12">

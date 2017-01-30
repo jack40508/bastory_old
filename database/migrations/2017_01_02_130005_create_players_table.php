@@ -19,6 +19,8 @@ class CreatePlayersTable extends Migration
             $table->string('email')->unique();
             $table->string('nickname')->nullable();
             $table->date('birth')->nullable();
+            $table->string('bats');
+            $table->string('throw');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

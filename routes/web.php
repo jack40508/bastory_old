@@ -34,7 +34,7 @@ Route::group(['namespace' => 'Team'],function (){
 	//Team Routes
 	Route::get('team/{team_name}/about','TeamController@about');
 	Route::get('team/{team_name}/introduction','TeamController@introduction');
-	Route::resource('/team/{team_name}','TeamController');
+	Route::resource('/team','TeamController');
 });
 
 $router->resource('test','Test\TestController');

@@ -19,6 +19,18 @@ class PlayersTableSeeder extends Seeder
             'password' => bcrypt('123456'),
             'nickname' => 'hchs',
             'birth' => Carbon::now()->toDateString(),
+            'bats' => '右打',
+            'throw' => '右投',
+        ]);
+
+        Player::create([
+            'name' => 'yoyu',
+            'email' => 'yoyu@bastory.com',
+            'password' => bcrypt('123456'),
+            'nickname' => 'YoYu',
+            'birth' => Carbon::now()->toDateString(),
+            'bats' => '右打',
+            'throw' => '右投',
         ]);
     }
 }
