@@ -1,6 +1,7 @@
 <?php 
 namespace App\Http\Controllers\Team;
 
+use Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Organization\TeamRepository;
@@ -35,6 +36,7 @@ class TeamController extends Controller {
 	public function create()
 	{
 		//
+		return view('team.home.create');
 	}
 
 	/**
@@ -42,9 +44,10 @@ class TeamController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		//
+		$teams = $this->team->createFromUser($request,Auth::user());
 	}
 
 	/**
@@ -53,10 +56,10 @@ class TeamController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($teamname)
+	public function show($team_englishname)
 	{
 		//
-		$team = $this->team->getTeamByName($teamname);
+		$team = $this->team->getTeamByEnglishName($team_englishname);
 		
 		return view('team.home.show',compact('team'));
 	}

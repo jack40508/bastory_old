@@ -19,6 +19,7 @@ class TeamsTableSeeder extends Seeder
             'logo' => 'YoYuBrother.png',
             'banner' => 'YoYuBrother.jpg',
             'about' => 'It is a test team',
+            'manager_id' => '2',
         ]);
     }
 }

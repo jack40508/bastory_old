@@ -27,4 +27,8 @@ class Team extends Model
     {
         return $this->belongsToMany(Player::class);
     }
+    public function manager()
+    {
+        return $this->belongsTo(Player::class,'manager_id','id');
+    }
 }

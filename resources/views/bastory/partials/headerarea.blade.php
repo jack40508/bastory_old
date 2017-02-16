@@ -5,7 +5,7 @@
         <nav class="navbar navbar-inverse nav-none-radius">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Bastory</a>
+                    <a class="navbar-brand" href="/">Bastory</a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#TeamNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -15,7 +15,7 @@
                 <div class="collapse navbar-collapse" id="TeamNavbar">
                     <ul class="nav navbar-nav">
                         <li><a href="/about">關於我們</a></li>
-                        <li><a href="/teamregister">註冊球隊</a></li>
+                        <li><a href="/team/create">註冊球隊</a></li>
                         <li><a href="/team">球隊一覽</a></li>
                         <li><a href="/recruit">徵人公告</a></li>
                         <li><a href="/board">公佈欄</a></li>

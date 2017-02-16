@@ -21,6 +21,7 @@ class CreateTeamsTable extends Migration
             $table->string('logo');
             $table->string('banner');
             $table->text('about')->nullable();
+            $table->integer('manager_id');
             $table->timestamps();
         });
     }

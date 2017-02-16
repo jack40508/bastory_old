@@ -14,12 +14,12 @@
                 </div>
                 <div class="collapse navbar-collapse" id="TeamNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="/team/teamname/game">近期比賽</a></li>
-                        <li><a href="/team/teamname/pastgame">過去活動</a></li>
-                        <li><a href="/team/teamname/gameresult">成績資訊</a></li>
-                        <li><a href="/team/teamname/board">公佈欄</a></li>
-                        <li><a href="/team/teamname/introduction">球團簡介</a></li>
-                        <li><a href="/team/teamname/recruit">加入我們</a></li>
+                        <li><a href="/team/{{$team->name}}/game">近期比賽</a></li>
+                        <li><a href="/team/{{$team->name}}/pastgame">過去活動</a></li>
+                        <li><a href="/team/{{$team->name}}/gameresult">成績資訊</a></li>
+                        <li><a href="/team/{{$team->name}}/board">公佈欄</a></li>
+                        <li><a href="/team/{{$team->name}}introduction">球團簡介</a></li>
+                        <li><a href="/team/{{$team->name}}/recruit">加入我們</a></li>
                     </ul>
                     @if(Auth::user())
                         <ul class="nav navbar-nav navbar-right">
