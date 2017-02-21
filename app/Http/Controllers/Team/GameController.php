@@ -3,20 +3,31 @@ namespace App\Http\Controllers\Team;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Organization\TeamRepository;
+use App\Game\GameRepository;
 
 use Illuminate\Http\Request;
 
 class GameController extends Controller {
+
+	public function __construct(TeamRepository $team,GameRepository $game)
+    {
+        $this->team = $team;
+        $this->game = $game;
+    }
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($team_englishname)
 	{
 		//
-		return view('team.game.index');
+		$team = $this->team->getTeamByEnglishName($team_englishname);
+		$games = $this->game->getGameByTeamID($team->id);
+
+		return view('team.game.index',compact('team','games'));
 	}
 
 	/**
@@ -84,9 +95,11 @@ class GameController extends Controller {
 	}
 
 	//Past Game View
-	public function pastgame()
+	public function pastgame($team_englishname)
 	{
 		//
-		return view('team.game.index-past');
+		$team = $this->team->getTeamByEnglishName($team_englishname);
+
+		return view('team.game.index-past',compact('team'));
 	}
 }

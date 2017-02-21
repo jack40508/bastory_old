@@ -20,9 +20,9 @@ class TeamRepository
     	return $teams;
     }
 
-    public function getTeamByEnglishName($teamname)
+    public function getTeamByEnglishName($team_englishname)
     {
-        $teams = $this->team->where('english_name',$teamname)->first();
+        $teams = $this->team->where('english_name',$team_englishname)->first();
 
         return $teams;
     }

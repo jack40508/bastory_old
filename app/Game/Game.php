@@ -5,6 +5,7 @@ namespace App\Game;
 use Illuminate\Database\Eloquent\Model;
 use App\Organization\Team;
 use App\Accounts\Player;
+use Carbon\Carbon;
 
 class Game extends Model
 {
@@ -71,5 +72,23 @@ class Game extends Model
     public function fieldingRecords()
     {
         return $this->hasMany(FieldingRecord::class);
+    }
+
+    public function getGameDateAttribute()
+    {
+        $dt = Carbon::parse($this->datetime);
+        return $dt->year.'-'.$dt->month.'-'.$dt->day;
+    }
+
+    public function getGameTimeAttribute()
+    {
+        $dt = Carbon::parse($this->datetime);
+        return $dt->hour.':'.$dt->minute;
+    }
+
+    public function getGatherTimeAttribute()
+    {
+        $dt = Carbon::parse($this->gather_at);
+        return $dt->hour.':'.$dt->minute;
     }
 }
