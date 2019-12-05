@@ -10,9 +10,9 @@
         <div class="row">
             @foreach($teams as $team)
                 <div class="col-xs-6 col-sm-6 col-md-3">
-                    <div class="infoing text-center">                       
-                        <div class="infoing-top" style="background-image:url('images/logo/{{$team->logo}}'); background-size:contain; background-position:center;"> 
-                        </div>  
+                    <div class="infoing text-center">
+                        <div class="infoing-top" style="background-image:url('images/logo/{{$team->logo}}'); background-size:contain; background-position:center;">
+                        </div>
                         <ul>
                             <li class="text-left">隊名</li>
                             <li>{{$team->name}}</li>

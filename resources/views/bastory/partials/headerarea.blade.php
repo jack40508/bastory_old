@@ -10,8 +10,8 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#TeamNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span> 
-                    </button> 
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="TeamNavbar">
                     <ul class="nav navbar-nav">
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
             </div>
-        </nav> 
+        </nav>
     </div>
-     
+
 </div>
